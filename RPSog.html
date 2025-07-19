@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Rockps</title>
+     <style>
+      body{
+        background-color: #1f7a76; 
+        border: 3px;
+        border-color: #eac17e;
+      }
+      .roo{
+        background-color:#eac17e;
+        font-style: normal;
+        font-size: 40px;
+        width: 200px;
+        height:70px ;
+        border-radius: 18px;
+        margin-top: 150px;
+       border-color:#1f7a76;
+       box-shadow: 5px;
+       margin-right: 20px;
+       margin-left: 48px;
+       font-family: monospace;
+       color: hsl(178, 75%, 19%);
+       
+       
+
+      }
+      .pap{
+         background-color: #eac17e;
+        font-style: normal;
+        font-size: 40px;
+        width: 200px;
+        height:70px ;
+        border-radius: 18px;
+        margin-top: 150px;
+       border-color: #1f7a76;
+       box-shadow: 5px;
+       margin-right: 20px;
+       font-family:monospace;
+       color: hsl(178, 75%, 19%);
+       
+      }
+      .sci{
+         background-color:#eac17e;
+        font-style: normal;
+        font-size: 40px;
+        width: 200px;
+        height:70px ;
+        border-radius: 18px;
+        margin-top: 150px;
+       border-color: #1f7a76;
+       box-shadow: 5px;
+       margin-right: 20px;
+       font-family: monospace;
+       color: hsl(178, 75%, 19%);
+      }
+      .hoo{
+        font-size: 30px;
+        margin-left: 200px;
+        font-family: monospace;
+        font-weight: 200;
+        color: #eac17e;
+        margin-top: 100px;
+      }
+      .vee{
+        margin-left: 70px;
+        margin-top: 50px;
+        font-family: monospace;
+        font-size: 15px;
+      }
+      .zee{
+        margin-left: 70px;
+        font-family: monospace;
+        font-size: 15px;
+      }
+      
+
+     </style>
+    </head>
+    <body>
+    
+      <p class="hoo">rock paper scissors</p>
+      <button class="roo" onclick="
+        koop();
+
+      let result = '';
+
+      if(comMov === 'ROCK')
+      {
+        result = 'TIE';
+      }
+      else if(comMov === 'PAPER')
+      {
+        result = 'YOU LOSE';
+      }
+      else if(comMov === 'SCISSOR')
+      {
+        result = 'YOU WIN';
+      }
+
+      alert(`YOU PICKED ROCK.COMPUTER PICKED ${comMov},${result}`);
+      ">rock</button>
+
+      <button class="pap" onclick="
+         koop();
+
+          let result = '';
+
+          if(comMov === 'ROCK')
+          {
+            result = 'YOU WIN';
+          }
+          else if(comMov === 'PAPER')
+          {
+            result = 'TIE';
+          }
+          else if(comMov === 'SCISSOR')
+          {
+            result = 'YOU LOSE';
+          }
+
+          alert(`YOU PICKED PAPER .COMPUTER PICKED ${comMov},${result}`);
+      ">paper</button>
+
+      <button class="sci" onclick="
+      koop();
+      let result = '';
+
+      if(comMov === 'ROCK')
+      {
+        result = 'YOU LOSE';
+      }
+      else if(comMov === 'PAPER')
+      {
+        result = 'YOU WIN';
+      }
+      else if(comMov === 'SCISSOR')
+      {
+        result = 'TIE';
+      }
+
+      alert(`YOU PICKED SCISSOR.COMPUTER PICKED ${comMov},${result}`);
+      ">scissors</button>
+      
+         
+         <script>
+           let comMov ='';
+          function koop(){
+             const randomNumber = Math.random();
+
+     
+
+      if(randomNumber >= 0 && randomNumber < 1/3 )
+      {
+         comMov = 'ROCK';
+      }else if(randomNumber >= 1/3 && randomNumber < 2/3){
+          comMov = 'PAPER';
+      }else if(randomNumber >= 2/3 && randomNumber < 1 ){
+          comMov = 'SCISSOR';
+      }
+          }
+         </script>
+    </body>
+</html>
+
+
+
+

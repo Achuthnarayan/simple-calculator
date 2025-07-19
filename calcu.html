@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>calculator</title>
+    <style>
+      body{
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        background-color: rgb(8, 8, 8);
+      
+
+
+      }
+      .cal{
+        border: 15px solid rgb(37, 35, 35);
+        padding: 15px;
+        border-radius: 15px;
+        background-color: rgb(76, 74, 74);
+    
+
+      }
+      .calcu{
+        width: 350px;
+        height: 50px;
+        border-radius: 10px;
+        background-color:rgb(147, 141, 142);
+        margin-bottom: 15px;
+        border: 5px solid rgb(48, 48, 48);
+        font-size: 30px;
+        color: black;
+        text-align: center;
+        font-weight: 100;
+        font-style:inherit;
+
+      }
+      button{
+        padding: 25px;
+        font-size: 25px;
+        height: 30px;
+        width: 30px;
+        margin-top: 10px;
+        margin-left: 26px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        border: 3px solid rgb(23, 23, 23);
+        font-style: italic;
+        background-color: rgb(180, 179, 179);
+        
+      }
+      .hhh{
+        background-color: red;
+        border: 3px solid rgb(167, 4, 4);
+      
+      }
+      .kkk{
+        background-color: rgb(13, 175, 13);
+        border: 3px solid green;
+      }
+      .qq{
+      
+        margin-top: 0px;
+        font-size: 25px;
+        margin-bottom: 0px;
+        font-style:initial;
+        font-weight: 200;
+        color: rgb(22, 22, 22);
+      }
+      .ww{
+        margin-left: 330px;
+        margin-top: 0px;
+        font-size: 10px;
+        margin-bottom: 19px;
+      }
+    </style>
+  </head>
+
+  <body>
+  
+    <div class="cal">
+      <p class="qq">CASIO</p> 
+      <p class="ww">98.85ugc</p>
+    <input type="text" id="display" class="calcu" disabled>
+    <br>
+    <div class="cucu">
+    <button onclick="append('1')">1</button>
+    <button onclick="append('2')">2</button>
+    <button onclick="append('3')">3</button>
+    <button onclick="append('4')">4</button>
+    <br>
+    <button onclick="append('5')">5</button>
+    <button onclick="append('6')">6</button>
+    <button onclick="append('7')">7</button>
+    <button onclick="append('8')">8</button>
+    <br>
+    <button onclick="append('9')">9</button>
+    <button onclick="append('0')">0</button>
+    <button class="hhh" onclick="clearDisplay()">c</button>
+    <button class="kkk" onclick="calculate()">=</button>
+    <br>
+    <button onclick="append('+')">+</button>
+    <button onclick="append('-')">-</button>
+    <button onclick="append('*')">*</button>
+    <button onclick="append('/')">/</button>
+    </div>
+    </div>
+  <script>
+     const display = document.getElementById('display');
+
+    function append(value) {
+      display.value += value;
+    }
+     function calculate() {
+      try {
+        display.value = eval(display.value);
+      } catch (e) {
+        display.value = 'Error';
+      }
+    }
+     function clearDisplay() {
+      display.value = '';
+    }
+    </script>
+  </body>
+</html>
